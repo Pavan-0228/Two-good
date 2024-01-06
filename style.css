@@ -1,108 +1,152 @@
 @font-face {
-    font-family: Futura;
-    src: url(./Futura-Bold.woff2);
+  font-family: Futura;
+  src: url(./Futura-Bold.woff2);
 }
-*::selection{
-    color: #fff;
-    background-color: black;
+*::selection {
+  color: #fff;
+  background-color: black;
 }
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: gilroy;
-}
-
-html,body{
-    height: 100%;
-    width: 100%;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: gilroy;
 }
 
-.page1{
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-    padding: 1vw;
-    padding-top: 18vh;
-    text-align: center;
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.page1 {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 1vw;
+  padding-top: 18vh;
+  text-align: center;
 }
 .page1 h1 {
-    font-size: 15.8vw;
-    text-transform: uppercase;
-    font-family: futura;
-    line-height: 14vw;
-    letter-spacing: -8px;
+  font-size: 15.8vw;
+  text-transform: uppercase;
+  font-family: futura;
+  line-height: 14vw;
+  letter-spacing: -8px;
 }
-.video-con{
-    height: 100vh;
-    width: 100%;
-    margin-top: 1vw;
-    position: relative;
+.video-con {
+  height: 100vh;
+  width: 100%;
+  margin-top: 1vw;
+  position: relative;
 }
-.play{
-    position: absolute;
-    background-color: black;
-    padding: 1.8vw 1vw;
+.play {
+  position: absolute;
+  background-color: black;
+  padding: 1.8vw 1vw;
+  font-size: 1.5vw;
+  font-weight: 700;
+  border-radius: 50%;
+  color: #fff;
+  display: none;
+  opacity: 0;
+  scale: 0;
+}
+.video-con video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.page2 {
+  padding: 3vw 1vw;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page2 .elem {
+  height: 100%;
+  width: 31%;
+  position: relative;
+  /* display: grid;
+  place-items: center; */
+}
+.page2 .elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.dets {
+  height: 50px;
+  width: 70%;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#elem1 .dets{
+    background-color: #E5F0D6;
+}
+#elem2 .dets{
+    background-color: #F5DFCF;
+}
+#elem3 .dets{
+    background-color: #FFFFFF;
+}
+.dets i{
+    font-size: .69vw;
+}
+.dets i:nth-child(4){
     font-size: 1.5vw;
-    font-weight: 700;
-    border-radius: 50%;
-    color: #fff;
-    display: none;
-    opacity: 0;
-    scale: 0;
+    color: #0000007d;
 }
-.video-con video{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+.dets h2{
+    font-size: .95vw;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+.dets h2:nth-child(2){
+    color: #000000da;
+    font-family: 100;
+}
+.dets:hover{
+    height: 100px;
 }
 
 
-.page2{
-    padding: 3vw 1vw;
-    position: relative;
+@media (max-width: 600px) {
+  .page1 {
+    min-height: 74vh;
+    padding: 3vw;
+    padding-top: 25vh;
+  }
+  .page1 h1 {
+    line-height: 10vw;
+    font-size: 15.5vw;
+    letter-spacing: -2px;
+  }
+  .video-con {
+    height: 28vh;
+    margin-top: 4vw;
+  }
+  .page2 {
+    padding: 3vw;
     min-height: 100vh;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.page2 .elem{
-    height: 100%;
-    width: 31%;
-}
-.page2 .elem img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: top;
-}
 
-@media (max-width:600px) {
-    .page1{
-        min-height: 74vh;
-        padding: 3vw;
-        padding-top: 25vh;
-    }
-    .page1 h1 {
-        line-height: 10vw;
-        font-size: 15.5vw;
-        letter-spacing: -2px;
-    }
-    .video-con{
-        height: 28vh;
-        margin-top: 4vw;
-    }
-    .page2{
-        padding: 3vw;
-        min-height: 100vh;
-        width: 100%;
-        
-        flex-direction: column;
-    }
-    .page2 .elem{
-        height: 100vh;
-        width: 100%;
-        margin-bottom: 3vw;
-    }
+    flex-direction: column;
+  }
+  .page2 .elem {
+    height: 100vh;
+    width: 100%;
+    margin-bottom: 3vw;
+  }
 }

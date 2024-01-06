@@ -8,7 +8,7 @@ const scroll = new LocomotiveScroll({
 
 function videoAmination (){
     videoCon.addEventListener("mouseenter",function (dets){
-        gsap.to(play,{
+            gsap.to(play,{
             opacity:1,
             scale:1,
             display:"block"
